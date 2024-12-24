@@ -1,3 +1,4 @@
+/* Base styles */
 body, html {
     height: 100%;
     margin: 0;
@@ -5,6 +6,11 @@ body, html {
     background-color: #333;
     color: white;
 }
+
+
+
+
+
 
 #wrapper {
     display: flex;
@@ -30,6 +36,7 @@ body, html {
 
 .prompt {
     color: green;
+    font-weight: bolder;
 }
 
 #input {
@@ -39,8 +46,19 @@ body, html {
     border: none;
     outline: none;
     padding: 3px;
-    
     font-size: medium;
+    caret-color: lime;
+
+}
+#input::selection {
+    background: lime; /* Color when text is selected */
+    color: black;
+}
+
+/* input cursor */
+#input:focus {
+    outline: none;
+    border: none;
 }
 
 #details-container {
@@ -58,4 +76,118 @@ p strong {
 
 a {
     color: #4CAF50;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 600px) {
+    #wrapper {
+        flex-direction: column; /* Stack the elements vertically */
+    }
+
+    #terminal-container {
+        display: none; /* Hide the terminal container on small screens */
+    }
+
+    #details-container {
+        flex: 1; /* Allow the details container to take the full width */
+        padding: 10px;
+        width: 100%; /* Make sure it takes the full width of the viewport */
+    }
+}
+
+
+#header-details {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.terminal-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Base styles for desktop */
+.tabs {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    background-color: #333;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 14px 20px;
+    border: none;
+    transition: background-color 0.3s;
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.tab:hover {
+    background-color: #555;
+}
+
+.tabcontent {
+    display: none; /* initially hide all tab content */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 600px) {
+    .tabs {
+        display: none; /* Hide tab headers on small screens */
+    }
+
+    .tabcontent {
+        display: block !important; /* Show all tab content on small screens */
+        animation: none; /* Remove animation to maintain performance */
+        opacity: 1; /* Set opacity to full to ensure visibility */
+        padding: 10px;
+        border: none; /* Remove borders between sections */
+    }
+
+    #wrapper {
+        flex-direction: column; /* Ensure vertical layout */
+    }
+
+    #terminal-container {
+        display: none; /* Optionally hide the terminal on small screens */
+    }
+
+    #details-container {
+        flex: 1;
+        padding: 10px;
+    }
+}
+
+.profile-image {
+    width: 150px;
+    height: auto;
+    border-radius: 50%; /* Makes the image circular */
+    margin-right: 20px;
+    float: left; /* Aligns the image to the left of the text */
 }

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div id="wrapper">
         <div id="terminal-container">
             <div id="terminal">
@@ -17,11 +18,124 @@
             </div>
         </div>
         <div id="details-container">
-            <!-- Static details here -->
-            <h1>Your Name</h1>
-            <p>Software Developer | Tech Enthusiast</p>
-            <p><strong>About Me:</strong> Brief description...</p>
-            <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+
+            <div id="header-details">
+                <div>
+                <h1>Nirmal Savinda</h1>
+                <p>Computer Science Undergraduate | Site Reliability Engineering Intern</p>
+                <!-- Social Media -->
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/nsavinda" target="_blank">Linkedin</a>
+                    <a href="https://www.github.com/nsavinda" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div>
+                <!-- Terminal Icon -->
+                <img src="terminal.png" alt="Terminal Icon" class="terminal-icon" onclick="openTerminal()">
+            </div>
+             </div>  
+
+                
+            <!-- Tabs for different sections -->
+            <ul class="tabs">
+                <li class="tab" onclick="openTab(event, 'About')">About</li>
+                <li class="tab" onclick="openTab(event, 'Experience')">Experience</li>
+                <li class="tab" onclick="openTab(event, 'Education')">Education</li>
+                <li class="tab" onclick="openTab(event, 'Projects')">Projects</li>
+                <li class="tab" onclick="openTab(event, 'Skills')">Skills</li>
+            </ul>
+
+            <!-- Content for each tab -->
+            <div id="About" class="tabcontent">
+                <h3>About Me</h3>
+                <img src="image.png" alt="Nirmal Savinda" class="profile-image">
+                <p>Site Reliability Engineering Intern at WSO2 and a third-year Computer Science undergraduate at the University of Colombo School of Computing, passionate about DevOps and Linux. Excited about continuous learning and growth in these domains. Actively seeking opportunities to expand my knowledge and skills through hands-on experiences and collaborative projects.
+                </p>
+                <p>
+                    Experienced with Linux, including Arch Linux and Ubuntu, and skilled in automating tasks using Shell Scripting. Experienced in Python, TypeScript, and JavaScript, specializing in the MERN stack. Proficient with Git, GitHub and GitHub Actions for seamless development, version control, and deployment workflows. 
+                </p> 
+                <p>
+                    Enthusiastically exploring Generative AI while actively participating in hackathons.
+                    
+                </p>
+                <p>
+                    Let's connect! I'm always open to new opportunities, collaborations, and engaging discussions in the tech community.   </p>
+            </div>
+
+            <div id="Experience" class="tabcontent">
+                <h3>Experience</h3>
+
+                <p> <strong>Site Reliability Engineering Intern | WSO2</strong> (Nov 2024 – Present)</p>
+                <ul>
+                    <li>Azure DevOps, GitHub Actions, Terraform </li>
+                </ul>
+
+                <p><strong>Software Engineer Intern | Axcer</strong> (Sep 2021 – Jun 2022)</p>
+                <ul>
+                    <li>Developed websites using React and GatsbyJS.</li>
+                    <li>Set up services in AWS EC2.</li>
+                </ul>
+            </div>
+
+            <div id="Education" class="tabcontent">
+                <h3>Education</h3>
+                <p><strong>University of Colombo School of Computing</strong></p>
+                <ul>
+                    <li>BSc in Computer Science - GPA: 3.25/4.00 (May 2022 - Present)</li>
+                </ul>
+                <p><strong>C W W Kannangara Central College - Matugama</strong></p>
+                <ul>
+                    <li>G.C.E A/L - ICT, Physics, Combined Mathematics (AAB)</li>
+                    <li>G.C.E O/L - 8A 1B</li>
+                </ul>
+            </div>
+<!-- 
+            <div id="Projects" class="tabcontent">
+                <h3>Projects</h3>
+                <p><strong>TESTIFY (May 2024 - Present)</strong> - An online exam platform for creating and hosting exams, developed using the RAG pipeline on IBM Cloud.</p>
+                <p><strong>WANDERLUST (Jun 2023 - Apr 2024)</strong> - A camping equipment renting and guide booking system, implemented using MVC architecture with PHP, MySQL, jQuery, JavaScript, and Docker.</p>
+                <p><strong>PUBLISHER-SUBSCRIBER CLI (Jul 2024)</strong> - A publisher subscriber socket application supporting multiple servers with P2P, developed in Python.</p>
+                <p><strong>TERMINAL AI (May 2024)</strong> - Command-line tool for AI-powered text and code generation using Gemini AI, OpenAI, and GPT4ALL APIs.</p>
+                <p><strong>SERVEFILES (Jun 2024)</strong> - An HTTPS server that serves static files on a local network from a directory with basic authentication, using Go and Docker.</p>
+            </div> -->
+
+            <div id="Projects" class="tabcontent">
+                <h3>Projects</h3>
+                <p><strong>TESTIFY (May 2024 - Present)</strong> </p>
+                <ul>
+                    <li>An online exam platform for creating and hosting exams. </li>
+                    <li>Generating questions using the RAG pipeline.</li>
+                    <li>Deployed on IBM Cloud using Terraform and Ansible.</li>
+                </ul>
+                <p><strong>WANDERLUST (Jun 2023 - Apr 2024)</strong></p>
+                <ul>
+                    <li>A camping equipment renting and guide booking system.</li>
+                    <li>Implemented using MVC architecture with PHP, MySQL, jQuery, JavaScript, and Docker.</li>
+                </ul>
+                <p><strong>PUBLISHER-SUBSCRIBER CLI (Jul 2024)</strong></p>
+                <ul>
+                    <li>A publisher subscriber socket application supporting multiple servers with P2P.</li>
+                    <li>Developed in Python.</li>
+                </ul>
+                <p><strong>TERMINAL AI (May 2024)</strong></p>
+                <ul>
+                    <li>Command-line tool for AI-powered text and code generation using Gemini AI, OpenAI, and GPT4ALL APIs.</li>
+                </ul>
+                <p><strong>SERVEFILES (Jun 2024)</strong></p>
+                <ul>
+                    <li>An HTTPS server that serves static files on a local network from a directory with basic authentication, using Go.</li>
+                </ul>
+            </div>
+
+            <div id="Skills" class="tabcontent">
+                <h3>Skills</h3>
+                <p><strong>Languages:</strong> Python, TypeScript, JavaScript, Shell Script, Go, PHP,  SQL</p>
+                <p><strong>Libraries/Frameworks:</strong> FastAPI, Express, React, Next.js</p>
+                <p><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Redis, Pinecone</p>
+                <p><strong>Tools/Platforms:</strong> GitHub Actions, Git, Docker, Azure DevOps, AWS, Netlify, DigitalOcean, Postman, Jenkins</p>
+                <p><strong>Operating Systems:</strong> Arch Linux, Ubuntu, Alma Linux, Windows</p>
+                <p><strong>Soft Skills:</strong> Adaptability, Problem Solving, Analytical Skills</p>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
