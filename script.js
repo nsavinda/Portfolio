@@ -185,7 +185,9 @@ function openTab(evt, tabName) {
 }
 
 window.onload = function() {
-    document.getElementById('output').innerHTML += `<p>Welcome to my personal terminal. Type 'help' for available commands.</p>`;
+    document.getElementById('output').innerHTML += `<p>Welcome to my personal terminal. Type 'help' for available commands.</p>
+    <p>Available commands:<br> - about<br> - contact<br> - projects<br> - clear<br> - help<br> - nirmalfetch<br> - tab<br> - tab [name]</p>
+    `;
 
     document.getElementsByClassName("tab")[0].click(); // Automatically open the first tab
 }
